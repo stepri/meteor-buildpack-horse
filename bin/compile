@@ -26,7 +26,7 @@ export_env_dir $3
 # Get the path to dir one above this file.
 BUILDPACK_DIR=$(cd -P -- "$(dirname -- "$0")" && cd .. && pwd -P)
 # Get the directory our app is checked out in (the "BUILD_DIR"), passed by Heroku
-APP_CHECKOUT_DIR=$1/src
+APP_CHECKOUT_DIR=$1/app
 # Where the Meteor app source code is located
 APP_SOURCE_DIR="$APP_CHECKOUT_DIR"
 echo "APP_SOURCE_DIR $APP_SOURCE_DIR"
