@@ -35,6 +35,7 @@ APP_SOURCE_DIR="$APP_CHECKOUT_DIR"
 if [ ! -d "$APP_SOURCE_DIR/.meteor" ] && [ -d "$APP_SOURCE_DIR/app/.meteor" ]; then
   APP_SOURCE_DIR="$APP_SOURCE_DIR/app/"
 fi
+echo "APP_SOURCE_DIR $APP_SOURCE_DIR"
 # Where we will install meteor. Has to be outside the APP_CHECKOUT_DIR.
 METEOR_DIR=`mktemp -d "$BUILDPACK_DIR"/meteor-XXXX`
 # Where we'll put things we compile.
