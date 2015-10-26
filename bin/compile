@@ -89,6 +89,10 @@ fi
 # </hack>
 
 echo "-----> Building Meteor with ROOT_URL: $ROOT_URL"
+echo "METEOR_DIR $METEOR_DIR"
+echo "METEOR $METEOR"
+echo "BUNDLE_DEST $BUNDLE_DEST"
+echo "ROOT_URL $ROOT_URL"
 HOME=$METEOR_DIR $METEOR build --server $ROOT_URL --directory $BUNDLE_DEST
 mv $BUNDLE_DEST/bundle "$COMPILE_DIR/app"
 rmdir $BUNDLE_DEST
